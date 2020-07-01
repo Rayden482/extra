@@ -39,14 +39,8 @@ def quickSort(target_list,low,high):
         quickSort(target_list, pi+1, high) 
 
 def largest_two(target_list):
-    a=0
-    b=0
-    n=len(target_list)
-    quickSort(target_list, 0, n-1)
-    a=target_list[-1]
-    target_list.pop(-1)
-    b=target_list[-1]
-    print(f"The largest and the second largest element in the list {target_list} are {a} and {b}")
+    arr=list(target_list)
+    n=len(arr)
+    quickSort(arr, 0, n-1)
+    print("The largest and second largest elements in the list {} are {} and {}".format(target_list,arr[-1],arr[-2]))
     
-target_list=[1,5,3,9,9,2]
-largest_two(target_list)
